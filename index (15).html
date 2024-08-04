@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<meta name="author" content="Ethan Gray">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Magic Eight Ball</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <script>
+  //create an array containing the responses
+    const answers = ["Yes", "No", "Maybe", "Ask Again", "That is above my paygrade", "Certainly So", "I am not sure", "Absolutely"]
+
+    var response;
+//create a while not done loop
+    while(response != "Done") {
+      //create prompt asking for a question or Done
+      response = prompt("Ask a question or type Done to stop");
+      if(response != "Done") {
+        //use randomizer to pull random response from array
+        var random = Math.floor(Math.random() * answers.length);
+        alert(answers[random]);
+      }
+      //repeats until user enters 'Done'
+    }
+  </script>
+</body>
+
+</html>
